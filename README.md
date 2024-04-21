@@ -3,8 +3,10 @@
 by Yanyao Cui
 
 ## The Brief Summary of the Topic
-Regional income inequality is an important social, political, and economic issue. Inequality can affect economic growth and development, political stability, and class and ethnic tensions. The empirical literature identifies various factors that shape inequality, such as urbanization, the level of development, the nature of the political regime, government intervention, and land inequality(Abdullah.et,2015). This issue influenced by a lot of factors. This study embarks on an initial investigation with the relationship between the Gini index(a measure of income distribution within a population) and several determinants over a decade (2012-2021) in CA. These determinants include education levels, and racial composition. Through this exploration, the research aims to contribute to a deeper understanding of how these variables interact with income inequality across different regions.The API allowing me to fetch the American Community Survey (ACS) five-year data from the 2012-2021 , with census tracts as the smallest unit of analysis.
+Regional income inequality is an important social, political, and economic issue. Inequality can affect economic growth and development, political stability, and class and ethnic tensions. The empirical literature identifies various factors that shape inequality, such as urbanization, the level of development, the nature of the political regime, government intervention, and land inequality(Abdullah.et,2015). 
 - [Abdullah, A., Doucouliagos, H., & Manning, E. (2015). Does education reduce income inequality? A meta‐regression analysis. Journal of Economic Surveys, 29(2), 301-316](https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12056).
+  
+This issue influenced by a lot of factors. This study embarks on an initial investigation with the relationship between the Gini index(a measure of income distribution within a population) and several determinants over a decade (2012-2021) in CA. These determinants include education levels, and racial composition. Through this exploration, the research aims to contribute to a deeper understanding of how these variables interact with income inequality across different regions.The API allowing me to fetch the American Community Survey (ACS) five-year data from the 2012-2021 , with census tracts as the smallest unit of analysis.
 
 ## Accessing the Dataset by API
 The dataset comes from US.Bureau, can be divided into responding variable and Explanatory Variables.
@@ -30,28 +32,35 @@ Even though there are also some other factors maybe have influence on income ine
 
 ## Determine the Scope of the Study
 In my research focusing on California, I referenced data from [Wikipedia](https://en.wikipedia.org/wiki/List_of_counties_in_California) and noted that there are 58 counties in the state. I grouped the data by county name and calculated the total population for each. From 2012 to 2021, I found that the sum population of the top 20 counties represents approximately 88.6% to 88.8% of the entire population of California's counties. Therefore, I believe these 20 counties provide a representative sample of the overall situation in California.
+
 ![population_top_20_counties](image/population_top_20_counties.png)
 
 ## Data Visualization by Pivot Table
 I analyzed the distribution of the Mean Gini Index across the 20 most populous counties in California over several years, visualizing the results with a pivot table. This analysis was designed to identify trends and variations in income inequality within these 20 counties.
+
 ![pivot_table](image/pivot_table.png)
 
 ## Data Visualization by Kdeplot
 Since the Gini Index is aggregated at the county level, the figure above only displays the annual average Gini coefficients for the top 20 most populous counties in California, while the figure below includes Gini Index over a decade at all tract level, the detailed tract-level analysis allows for a more granular understanding of income inequality, which might be masked in a broader county-level analysis.Finally, I find both of these two figures identify the San Francisco County as an outlier, with a significant rightward shift in its distribution. This trend may be attributed to difference in the SF county' population composition.
+
 ![kdeplot](image/kdeplot.png)
 
 ## Case Study in San Fransisco
 Based on the findings from the analysis above, I have decided to further narrow my research focus. This time, I will concentrate exclusively on the outlier, San Francisco County.
+
 ![SF_county](image/SF_county.jpg)
 
 ## Data Visualization by Pairplot
-I used a pairplot to investigate potential correlations between educational attainment and the Gini Index within San Fransisco County. It was evident that higher educational attainment, such as a bachelor's degree or above, is negatively correlated with the Gini Index, while having a high school education or less shows a positive correlation. This suggests that higher educational levels tend to reduce overall income inequality.
+I used a pairplot to investigate potential correlations between educational attainment and the Gini Index within San Fransisco County. It was evident that higher educational attainment, such as a bachelor's degree or above, is negatively correlated with the Gini Index, while having a high school education or less and associate degree show a positive correlation. This suggests that higher educational levels tend to reduce overall income inequality.
+
 ![pivot_table_1](image/pivot_table_1.png)
+
 Following the same methodology within San Fransisco County, I shifted my focus to the influence of racial composition on the Gini Index. I discovered that the percentages of White and Asian populations have significant linear correlations with the Gini Index.
+
 ![pivot_table_2](image/pivot_table_2.png)
 
 ## Animation by Plotly
-Next, I plan to create an animation that illustrates the changing correlations between various factors and the Gini Index from 2012 to 2021 within San Francisco County.
+Next, I plan to create an animation that illustrates the changing correlations between various factors and the Gini Index from 2012 to 2021 within San Francisco County. Given the insights from the previous pairplot analysis, there appears to be a linear relationship between different levels of educational attainment (high school education or less, associate degree, bachelor’s degree or higher) and the Gini Index. Furthermore, the linear relationships are observed between the Gini Index and the racial compositions of White and Asian individuals comparing to other races. Therefore, my subsequent research will primarily focus on these five factors.
 - Firstly, let's study the correlation between the percentage of individuals with higher educational attainment and the Gini Index. Over the past decade, we have observed that as the proportion of people holding a bachelor's degree or higher increases, the Gini Index has gradually decreased.
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
@@ -99,20 +108,32 @@ Next, I plan to create an animation that illustrates the changing correlations b
 
 ## Temporal Relationships Between Factors and Income Inequality
 Finally, I would like to present the map to provide more details about the relationship, particularly how it is influenced by spatial and temporal factors.
+
 ![map](image/map.png)
 
 From this map, let's first focus on my response variable: the changes in the Gini index over space and time. Observations reveal that the lowest values of the Gini index are concentrated around **Golden Gate Park**, while the highest values are found near **Chinatown**. Another noteworthy anomaly is near **John McLaren Park**, where the Gini index was high from 2012 to 2019 but then dropped significantly in 2020-2021, suggesting that something interesting might have occurred, possibly due to policy changes or other factors. For a clearer explanation, let's focus solely on the variations of the explanatory variable in these three locations over time and space, and consider how they might impact the Gini index.
+
 ![outlier](image/outlier.png)
 
-Educational Factors VS Gini Index:  
+Educational Factors vs Gini Index:  
 We can observe that **Golden Gate Park** has a higher clustering of highly educated individuals, whereas the scenario of the **Chinatown** is reversely. This distribution aligning with the negative correlation between education level and income equality. Specifically, regions with a higher proportion of highly educated individuals tend to have more equal incomes, whereas those with a higher proportion of less educated individuals tend to have less income equality. 
 However, an anomaly is noted near **John McLaren Park**, where, despite a high concentration of less educated individuals after 2019, the Gini index dropped significantly, which suggests that other factors might be influencing on the Gini Index. And the explanatory variables we have are insufficient to fully explain this phenomenon. 
 
-Racial Composition Factors VS Gini Index:  
+Racial Composition Factors vs Gini Index:  
 We can find that around **Chinatown**, there is a higher percentage of Asians and more income gap, and around **Golden Gate Park** there is a higher percentage of White people and less income gap. But similar to the result of educational factors on the Gini index around **John McLaren Park**, there are fewer White people, more Asians after 2019, the area suddenly become more income equality, which suggests that other factors might be influencing on the Gini Index.
 
 An Hypothesis for "Outlier" John McLaren Park:  
-I found a clear relationship between the percentage of Asians in John McLaren Park and high school or less attainment after 2019. Combining this with the results of the Gini index in this area suggests that this segment of the Asian population is quite distinct. These additional individuals may share certain characteristics, such as a higher and earlier engagement in entrepreneurial activities or occupations, despite requiring lower education attainment, offer higher income potential. And maybe have some other specific policies to appeal those Asian people to live or invest areas surrounding John McLaren Park after 2019, which significantly mitigates income inequality in the region. 
+I found a clear relationship between the percentage of Asians in John McLaren Park and high school or less attainment after 2019. Combining this with the results of the Gini index in this area suggests that this segment of the Asian population is quite distinct. 
+For example, these additional individuals may share certain characteristics, such as a higher and earlier engagement in entrepreneurial activities or occupations, despite requiring lower education attainment, offer higher income potential. 
+Further considerations, maybe there are some other specific policies to appeal those Asian people to live or invest areas surrounding John McLaren Park after 2019, which significantly mitigates income inequality in the region. 
 
 ## Brief Conclusion
-This study investigates the distribution of income inequality across different geographic areas in San Fransisco and explores the relationship between demographic characteristics and income inequality. Utilizing the American Community Survey (ACS) five-year data from 2012 to 2021, with census tracts as the smallest unit of analysis, the research aims to deepen the understanding of the interactions between these variables and income inequality. Notably, the study identifies San Francisco County as a significant outlier with a higher Gini index compared to other top 20 counties in California. This finding is further confirmed by observing the distribution of all Gini indices over the decade, indicating a significant rightward trend in San Francisco County. Pairplot analysis of demographic data and the Gini index reveals a significant relationship between educational level, the percentage of white individuals, and income inequality. In San Francisco County, it has been observed that as the proportion of individuals with at least a bachelor's degree increases, the Gini index gradually decreases. However, the trend of the Gini index in response to an increasing percentage of white people first decreases and then increases, showing an unstable pattern. These findings provide insightful understandings of how various factors affect income inequality across regions.
+This study investigates the distribution of income inequality across different geographic areas in California and explores the relationship between demographic characteristics and income inequality. Utilizing the American Community Survey (ACS) five-year data from 2012 to 2021, with census tracts as the smallest unit of analysis, the research aims to deepen the understanding of the interactions between these variables and income inequality. Notably, the study identifies San Francisco County as a significant outlier with a higher Gini index compared to other top 20 counties in California. 
+
+This finding is further confirmed by observing the distribution of all Gini indices over the decade, indicating a significant rightward trend in San Francisco County. Pairplot analysis of demographic data and the Gini index reveals a relationship between educational level, racial composition and income inequality. Therefore, I chose 5 factors with relatively clear linear relationships (01.Percentage of bachelor or higher, 02.Percentage of associate degree, 03.Percentage of high school and below, 04.Percentage of White, 05.Percentage of Asian) to further explore the relationship with the Gini Index.
+
+Specifically, it has been observed that in San Francisco County, as the proportion of individuals with at least a bachelor's degree increases, the Gini index tends to decrease. Conversely, as the percentage of people with associate degrees or only high school education increases, the Gini index tends to rise, wchich is consistent with the results we have learned from the literature.
+
+However, the trend of the Gini index in response to an increasing percentage of White and Asian people first decreases and then increases, showing an unstable pattern. This observation is inconsistent with the literature, which suggests a significant positive correlation between the proportion of White individuals and the Gini index. The reason for this discrepancy may be that I choose too few explanatory variables and don't consider endogeneity between variables, in other words, not holding other factors that might influence the response variable. Another possibility is that the literature reflects a national context, where the relationship between the proportion of White individuals and the Gini index is positive. But this relationship may exhibit spatial heterogeneity, meaning it varies by region. In other words, the scope of my study does not align with that of the literature.
+
+In summary, this finding provides insightful understanding into how various factors influence income inequality across different regions and at various times.
