@@ -1,4 +1,4 @@
-# The Study of Factors Influence on Income Inequality in California
+# Examining racial and education factors contributed to income inequality in the most inequality county in California from 2012 to 2021 
 
 by Yanyao Cui
 
