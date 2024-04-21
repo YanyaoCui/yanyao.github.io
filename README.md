@@ -2,7 +2,7 @@
 
 by Yanyao Cui
 
-## The Brief Summary of the Topic
+## The Introduction of the Topic
 Regional income inequality is an important social, political, and economic issue. Inequality can affect economic growth and development, political stability, and class and ethnic tensions. The empirical literature identifies various factors that shape inequality, such as urbanization, the level of development, the nature of the political regime, government intervention, and land inequality(Abdullah.et,2015). 
 - [Abdullah, A., Doucouliagos, H., & Manning, E. (2015). Does education reduce income inequality? A meta‐regression analysis. Journal of Economic Surveys, 29(2), 301-316](https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12056).
   
