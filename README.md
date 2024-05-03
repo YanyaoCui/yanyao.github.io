@@ -9,7 +9,7 @@ Regional income inequality is an important social, political, and economic issue
 This issue influenced by a lot of factors. This study embarks on an initial investigation with the relationship between the Gini index(a measure of income distribution within a population) and several determinants over a decade (2012-2021) in CA. These determinants include education levels, and racial composition. Through this exploration, the research aims to contribute to a deeper understanding of how these variables interact with income inequality across different regions.The API allowing me to fetch the American Community Survey (ACS) five-year data from the 2012-2021 , with census tracts as the smallest unit of analysis.
 
 ## Accessing the Dataset by API
-The dataset comes from US.Bureau, can be divided into responding variable and Explanatory Variables.
+The dataset comes from US.Bureau, can be divided into responding variable and explanatory variables.
 
 ### Responding Variable
 The Gini Index, a widely used metric for assessing income inequality(Farris,F.A,2010), provides valuable insights into the socioeconomic disparities within a population. At the Census Tract level, a more granular examination of these disparities becomes possible, making it an essential tool for understanding localized inequalities. 
