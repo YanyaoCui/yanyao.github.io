@@ -111,7 +111,7 @@ Finally, I would like to present the map to provide more details about the relat
 
 ![map](image/map.png)
 
-From this map, let's first focus on my response variable: the changes in the Gini index over space and time. Observations reveal that the lowest values of the Gini index are concentrated around **Golden Gate Park**, while the highest values are found near **Chinatown**. Another noteworthy anomaly is near **John McLaren Park**, where the Gini index was high from 2012 to 2019 but then dropped significantly in 2020-2021, suggesting that something interesting might have occurred, possibly due to policy changes or other factors. For a clearer explanation, let's focus solely on the variations of the explanatory variable in these three locations over time and space, and consider how they might impact the Gini index.
+From this map, let's first focus on my response variable: the changes in the Gini index over space and time. Observations reveal that the lowest values of the Gini index are concentrated around **Excelsior and Cayuga Terrace Community**, while the highest values are found near **Chinatown**. For a clearer explanation, let's focus solely on the variations of the explanatory variable in these three locations over time and space, and consider how they might impact the Gini index.
 
 ![outlier](image/outlier.png)
 
