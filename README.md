@@ -113,7 +113,7 @@ Finally, I would like to present the map to provide more details about the relat
 
 From this map, let's first focus on my response variable: the changes in the Gini index over space and time. Observations reveal that the highest values are found near **Chinatown**. For a clearer explanation, let's focus solely on the variations of the explanatory variables in this locations over time and space, and consider how they might impact the Gini index.
 
-![outlier](image/outlier.png)
+![outlier](image/outliers.png)
 
 Educational Factors vs Gini Index:  
 We can observe that **Chinatown** has a higher concentration of residents with high school degrees, but fewer residents with bachelor's or associate degrees. This distribution aligns with the negative correlation between education level and income equality. Specifically, regions with a higher proportion of highly educated individuals tend to exhibit greater income equality, whereas those with a higher proportion of less educated individuals tend to experience less income equality. 
